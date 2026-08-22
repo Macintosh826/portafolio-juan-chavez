@@ -1,0 +1,180 @@
+/* ===================================================
+   PORTAFOLIO AUDIOVISUAL — JUAN CHÁVEZ (Estilo GitHub)
+   =================================================== */
+
+:root {
+  --bg-color: #0d1117;
+  --card-bg: #161b22;
+  --border-color: #30363d;
+  --text-primary: #f0f6fc;
+  --text-secondary: #8b949e;
+  --accent-color: #58a6ff;
+  --accent-hover: #1f6feb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  padding-bottom: 40px;
+}
+
+/* --- ANIMACIÓN DE INICIO --- */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(88, 166, 255, 0.4);
+  }
+}
+
+/* --- BANNER DE ENTRADA (HERO) --- */
+.hero {
+  background: linear-gradient(180deg, #161b22 0%, #0d1117 100%);
+  border-bottom: 1px solid var(--border-color);
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInSlide 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(56, 139, 253, 0.15);
+  color: var(--accent-color);
+  border: 1px solid rgba(56, 139, 253, 0.4);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.8px;
+  margin-bottom: 10px;
+  animation: pulseGlow 3s infinite ease-in-out;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 8px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+/* --- CONTENEDOR Y TARJETAS --- */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.work-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 30px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-color);
+}
+
+.work-header {
+  margin-bottom: 10px;
+}
+
+.work-number {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.work-card h3 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-top: 4px;
+}
+
+.work-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+/* --- CONTENEDOR DE VIDEO RESPONSIVE --- */
+.video-wrapper {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #000;
+  border: 1px solid var(--border-color);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- PIE DE PÁGINA --- */
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .work-card {
+    padding: 16px;
+  }
+}
